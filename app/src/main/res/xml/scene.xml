@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorSide="bottom" />
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/btn4"
+                app:percentX="1"
+                app:percentY="0" />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/btn5"
+                app:percentX="1"
+                app:percentY="0" />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/btn6"
+                app:percentX="1"
+                app:percentY="0" />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/btn7"
+                app:percentX="0"
+                app:percentY="1" />
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/btn8"
+                app:percentX="0"
+                app:percentY="1" />
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/btn9"
+                app:percentX="0"
+                app:percentY="1" />
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="25"
+                app:motionTarget="@id/btn7" />
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="25"
+                app:motionTarget="@id/btn8" />
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="25"
+                app:motionTarget="@id/btn9" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/btn1"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn2"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn1"
+            app:layout_constraintRight_toLeftOf="@id/btn3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn3"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn4"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn5"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Constraint
+            android:id="@+id/btn5"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn4"
+            app:layout_constraintRight_toLeftOf="@id/btn6"
+            app:layout_constraintTop_toBottomOf="@id/btn2" />
+
+        <Constraint
+            android:id="@+id/btn6"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn3" />
+
+        <Constraint
+            android:id="@+id/btn7"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn8"
+            app:layout_constraintTop_toBottomOf="@id/btn4" />
+
+        <Constraint
+            android:id="@+id/btn8"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn7"
+            app:layout_constraintRight_toLeftOf="@id/btn9"
+            app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+        <Constraint
+            android:id="@+id/btn9"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn8"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn6" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/btn1"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn2"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn1"
+            app:layout_constraintRight_toLeftOf="@id/btn3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn3"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn2"
+            app:layout_constraintRight_toLeftOf="@id/btn4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn4"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn5"
+            app:layout_constraintRight_toLeftOf="@id/btn3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn5"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn4"
+            app:layout_constraintRight_toLeftOf="@id/btn6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn6"
+            style="@style/ViewStyle"
+            app:layout_constraintLeft_toRightOf="@id/btn5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/btn7"
+            style="@style/ViewStyle"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/btn8"
+            style="@style/ViewStyle"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/btn9"
+            style="@style/ViewStyle"
+            android:visibility="gone" />
+    </ConstraintSet>
+</MotionScene>
